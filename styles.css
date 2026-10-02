@@ -23,8 +23,8 @@ h1{font-weight:650;letter-spacing:-1.2px;line-height:1.2}
 .authors{display:flex;flex-wrap:wrap;justify-content:center;column-gap:23px;row-gap:5px;margin-top:28px;font-size:19px;color:var(--accent)}
 .authors>span,.affiliations>span{white-space:nowrap}
 .affiliations{display:flex;justify-content:center;flex-wrap:wrap;gap:2px 19px;margin-top:9px;font-size:14px;color:var(--muted)}
-.publication-links{display:flex;justify-content:center;margin-top:24px}
-.paper-link{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:#fff;padding:8px 24px;border-radius:25px;font-size:16px;font-weight:550;transition:background .15s}
+.publication-links{display:flex;justify-content:center;align-items:stretch;flex-wrap:wrap;gap:10px;margin-top:24px}
+.paper-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-width:120px;min-height:48px;border:1px solid transparent;background:var(--ink);color:#fff;padding:8px 24px;border-radius:25px;font-size:16px;font-weight:550;transition:background .15s}
 .paper-link:hover{background:var(--accent);text-decoration:none}
 .paper-link svg{width:19px;height:19px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linejoin:round;stroke-linecap:round}
 .teaser-section{padding-bottom:37px}
@@ -90,3 +90,10 @@ h4{font-size:19px;font-weight:650;letter-spacing:-.2px}
 /* Let the sketch fill its own natural bounds, without a padded white card. */
 .reference-image--sketch{display:block;aspect-ratio:auto;background:transparent;border-radius:0;padding:0;max-height:none;overflow:visible}
 .reference-image--sketch img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+
+.resource-placeholder,.resource-placeholder:hover{background:#f0f3f6;color:#687785;border:1px dashed #b9c5d0;cursor:default}
+.resource-label{display:flex;flex-direction:column;align-items:flex-start;gap:2px;line-height:1.1}
+.coming-soon{font-size:10px;font-weight:400;letter-spacing:.2px;white-space:nowrap}
+.bibtex-code{margin:0;padding:25px 28px;border:1px solid var(--line);border-radius:6px;background:var(--tint);color:var(--ink);font:14px/1.85 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;white-space:pre-wrap;overflow-wrap:anywhere;tab-size:2}
+.bibtex-code code{font:inherit}
+@media(max-width:540px){.publication-links{gap:9px}.paper-link{padding-inline:18px;min-width:135px}.bibtex-code{padding:18px;font-size:12px;line-height:1.8}}
